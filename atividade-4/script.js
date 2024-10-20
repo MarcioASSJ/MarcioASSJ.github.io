@@ -1,4 +1,3 @@
-// Inicializando Swiper.js
 const swiper = new Swiper('.swiper-container', {
     loop: true,
     navigation: {
@@ -11,18 +10,13 @@ const swiper = new Swiper('.swiper-container', {
     },
   });
   
-  // Inicializando AOS.js para animações
-  AOS.init();
   
-  // Função para consumir API e popular serviços
-  // Função para consumir a API de tradução Draconic e exibir na seção "Serviços"
   function carregarFraseKanye() {
     fetch('https://api.kanye.rest')
     .then(response => response.json())
     .then(data => {
         const container = document.querySelector('.servicos-container');
         
-        // Criando um card para a frase do Kanye West
         const card = document.createElement('div');
         card.classList.add('servico-card');
         card.innerHTML = `
@@ -30,21 +24,17 @@ const swiper = new Swiper('.swiper-container', {
             <p>"${data.quote}"</p>
         `;
         
-        // Adicionando o card ao container de serviços
         container.appendChild(card);
     })
     .catch(error => {
         console.error('Erro ao carregar a frase:', error);
         
-        // Exibindo mensagem de erro na página
         const container = document.querySelector('.servicos-container');
         const errorMessage = document.createElement('div');
         errorMessage.innerHTML = `<p>Erro ao carregar a frase. Tente novamente mais tarde.</p>`;
         container.appendChild(errorMessage);
     });
 }
-
-// Exemplo: Carregar a frase ao iniciar a página
 carregarFraseKanye();
 
 
@@ -66,9 +56,8 @@ const depoimentos = [
     }
 ];
 
-// Função para exibir os depoimentos na página
 AOS.init({
-    duration: 1000, // Duração da animação
+    duration: 1000, 
     easing: 'ease-in-out',
   });
 function carregarDepoimentos() {
@@ -86,11 +75,9 @@ function carregarDepoimentos() {
     });
 }
 
-// Chama a função para carregar os depoimentos ao carregar a página
 window.addEventListener('DOMContentLoaded', carregarDepoimentos);
 
   
-  // Função para validar formulário de contato
   document.getElementById('contact-form').addEventListener('submit', function(e) {
       e.preventDefault();
       const nome = document.getElementById('nome').value;
