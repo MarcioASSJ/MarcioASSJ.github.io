@@ -37,35 +37,37 @@
             <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
-                    <img src="banner1.jpg" alt="Imagem 1">
+                    <img class="img_slide" src="https://raw.githubusercontent.com/MarcioASSJ/MarcioASSJ.github.io/refs/heads/main/atividade-4/Arena_de_batalha.webp" alt="Imagem 1">
                 </div>
                 <div class="swiper-slide">
-                    <img src="banner2.jpg" alt="Imagem 2">
+                    <img class="img_slide" src="https://raw.githubusercontent.com/MarcioASSJ/MarcioASSJ.github.io/refs/heads/main/atividade-4/Elfos_do_Ceu.webp" alt="Imagem 2">
                 </div>
                 <div class="swiper-slide">
-                    <img src="banner3.jpg" alt="Imagem 3">
+                    <img class="img_slide" src="https://github.com/MarcioASSJ/MarcioASSJ.github.io/blob/main/atividade-4/arena-redonda-cima.png?raw=true" alt="Imagem 3">
                 </div>
             </div>
             <!-- Botões de navegação -->
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
             <!-- Indicadores (pontos) -->
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination" id="paginacao"></div>
         </div>
     </section>
 
     <!-- Seção Sobre -->
     <section id="sobre">
         <h2>Sobre Nós</h2>
-        <p>Somos uma empresa especializada em RPG de mesa, oferecendo aventuras épicas e produtos exclusivos para jogadores e mestres. Nosso objetivo é criar experiências imersivas e únicas.</p>
+        <p>Aqui compartilhamos aventuras vivídas por personagens distintos, alguns não se conhecem, outros sim, mas o que eles possuem em comum é terem sidos criados para uma mesa de RPG com uma Mestra Assassina</p>
     </section>
 
     <!-- Seção de Serviços -->
     <section id="servicos">
         <h2>Serviços</h2>
+        <p>Aqui pode gerar algumas frases de inspiração para usar nas suas sessões de RPG</p>
         <div class="servicos-container">
             <!-- Os serviços serão carregados dinamicamente pela API -->
         </div>
+        <button onclick="carregarFraseKanye()">Carregar Frase do Kanye</button>
     </section>
 
     <!-- Seção de Testemunhos -->
