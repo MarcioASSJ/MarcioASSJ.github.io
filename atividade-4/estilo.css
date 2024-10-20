@@ -16,6 +16,11 @@ header {
     color: white;
 }
 
+.logo{
+    width: 30%;
+    height: auto;
+}
+
 header nav ul {
     display: flex;
     list-style: none;
