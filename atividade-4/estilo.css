@@ -1,0 +1,109 @@
+/* Estilos básicos */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 20px;
+    color: white;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+header .cta {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+header .cta:hover {
+    background-color: #ff4500;
+}
+
+/* Banner (Slider) */
+.banner {
+    width: 100%;
+    height: 400px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Sobre */
+#sobre {
+    padding: 50px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Serviços */
+#servicos {
+    padding: 50px;
+}
+
+.servicos-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Testemunhos */
+#testemunhos {
+    padding: 50px;
+}
+
+.testemunhos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Contato */
+#contato {
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact-form input, #contact-form textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
