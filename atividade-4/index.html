@@ -6,13 +6,10 @@
     <title>RPG de Mesa - Aventuras com um mestre assassino</title>
     <link rel="stylesheet" href="estilo.css">
     
-    <!-- Swiper.js CSS (para o slider) -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     
-    <!-- AOS.js CSS (para animações de rolagem) -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 
-    <!-- Fonte do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -31,54 +28,44 @@
         </nav>
     </header>
 
-    <!-- Banner Principal com Slider -->
     <section class="banner">
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <!-- Slides -->
                 <div class="swiper-slide">
-                    <img class="img_slide" src="https://raw.githubusercontent.com/MarcioASSJ/MarcioASSJ.github.io/refs/heads/main/atividade-4/Arena_de_batalha.webp" alt="Imagem 1">
+                    <img  src="https://raw.githubusercontent.com/MarcioASSJ/MarcioASSJ.github.io/refs/heads/main/atividade-4/Arena_de_batalha.webp" alt="Imagem 1">
                 </div>
                 <div class="swiper-slide">
-                    <img class="img_slide" src="https://raw.githubusercontent.com/MarcioASSJ/MarcioASSJ.github.io/refs/heads/main/atividade-4/Elfos_do_Ceu.webp" alt="Imagem 2">
+                    <img  src="https://raw.githubusercontent.com/MarcioASSJ/MarcioASSJ.github.io/refs/heads/main/atividade-4/Elfos_do_Ceu.webp" alt="Imagem 2">
                 </div>
                 <div class="swiper-slide">
-                    <img class="img_slide" src="https://github.com/MarcioASSJ/MarcioASSJ.github.io/blob/main/atividade-4/arena-redonda-cima.png?raw=true" alt="Imagem 3">
+                    <img  src="https://github.com/MarcioASSJ/MarcioASSJ.github.io/blob/main/atividade-4/arena-redonda-cima.png?raw=true" alt="Imagem 3">
                 </div>
             </div>
-            <!-- Botões de navegação -->
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
-            <!-- Indicadores (pontos) -->
             <div class="swiper-pagination" id="paginacao"></div>
         </div>
     </section>
 
-    <!-- Seção Sobre -->
     <section id="sobre">
         <h2>Sobre Nós</h2>
         <p>Aqui compartilhamos aventuras vivídas por personagens distintos, alguns não se conhecem, outros sim, mas o que eles possuem em comum é terem sidos criados para uma mesa de RPG com uma Mestra Assassina</p>
     </section>
 
-    <!-- Seção de Serviços -->
     <section id="servicos">
         <h2>Serviços</h2>
         <p>Aqui pode gerar algumas frases de inspiração para usar nas suas sessões de RPG</p>
         <div class="servicos-container">
-            <!-- Os serviços serão carregados dinamicamente pela API -->
         </div>
         <button onclick="carregarFraseKanye()">Carregar Frase do Kanye</button>
     </section>
 
-    <!-- Seção de Testemunhos -->
     <section id="testemunhos">
         <h2>O que nossos personagens ja nos relataram</h2>
         <div  class="testemunhos-container">
-            <!-- Testemunhos carregados dinamicamente via API -->
         </div>
     </section>
 
-    <!-- Seção de Contato -->
     <section id="contato">
         <h2>Entre em Contato</h2>
         <form id="contact-form">
@@ -90,7 +77,6 @@
         </form>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2024 RPG de Mesa. Todos os direitos reservados.</p>
         <div class="social-media">
@@ -100,16 +86,12 @@
         </div>
     </footer>
 
-    <!-- Swiper.js (Slider) -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <!-- AOS.js (Animações) -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
-    <!-- EmailJS para enviar emails -->
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
 
-    <!-- Arquivo JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>

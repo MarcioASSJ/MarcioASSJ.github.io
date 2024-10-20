@@ -1,9 +1,9 @@
-/* Estilos básicos */
 body {
     font-family:monospace;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: x-large;
 }
 
 .container {
@@ -12,7 +12,6 @@ body {
     margin: 20px;
 }
 
-/* Estilização para tablets */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -25,7 +24,6 @@ body {
     }
 }
 
-/* Estilização para smartphones */
 @media (max-width: 480px) {
     .container {
         padding: 5px;
@@ -41,23 +39,18 @@ body {
     }
 }
 
-/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #423724;
     padding: 20px;
     color: white;
+    
 }
 
 .logo{
     width: 30%;
-    height: auto;
-}
-
-.img_slide{
-    width: 25%;
     height: auto;
 }
 
@@ -81,13 +74,13 @@ header .cta {
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
+    margin: 8%;
 }
 
 header .cta:hover {
     background-color: #ff4500;
 }
 
-/* Banner (Slider) */
 .banner {
     width: 100%;
     height: 400px;
@@ -105,15 +98,14 @@ header .cta:hover {
 padding-bottom: 33vh;
 }
 
-/* Sobre */
 #sobre {
-    background-color: #f4f4f4;
+    background-color: #83653c;
     text-align: center;
     padding: 10px;
     padding-bottom: 10px;
+    
 }
 
-/* Serviços */
 #servicos {
     padding: 50px;
 }
@@ -123,41 +115,24 @@ padding-bottom: 33vh;
     justify-content: space-around;
 }
 
-/* Testemunhos */
 #testemunhos {
     padding: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-}
-
-.testemunho-card {
-    width: 300px;
-    margin: 20px;
-    padding: 15px;
-    background: #f9f9f9;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.testemunho-card[data-aos] {
-    opacity: 0;
     transition-property: opacity, transform;
-}
-
-.testemunho-card[data-aos].aos-animate {
-    opacity: 1;
 }
 
 .testemunhos-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
-/* Contato */
 #contato {
     padding: 50px;
-    background-color: #f4f4f4;
+    background-color: #83653c;
+    text-align: center;
 }
 
 #contact-form {
@@ -172,9 +147,8 @@ padding-bottom: 33vh;
     padding: 10px;
 }
 
-/* Footer */
 footer {
-    background-color: #333;
+    background-color: #423724;
     color: white;
     text-align: center;
     padding: 20px;
@@ -213,7 +187,7 @@ footer {
 }
 
 .testemunho-card {
-    background-color: white;
+    background-color: rgb(211, 180, 93);
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -241,7 +215,6 @@ footer {
 }
 
 
-/* Estilização básica do botão */
 button {
     background-color: #4CAF50;
     color: white;
@@ -251,9 +224,8 @@ button {
     cursor: pointer;
 }
 
-/* Efeito de hover */
 button:hover {
     background-color: #45a049;
-    transform: scale(1.05); /* Aumenta o tamanho ao passar o mouse */
+    transform: scale(1.05); 
     transition: all 0.3s ease;
 }
