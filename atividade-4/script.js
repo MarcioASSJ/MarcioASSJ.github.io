@@ -67,6 +67,10 @@ const depoimentos = [
 ];
 
 // Função para exibir os depoimentos na página
+AOS.init({
+    duration: 1000, // Duração da animação
+    easing: 'ease-in-out',
+  });
 function carregarDepoimentos() {
     const container = document.querySelector('.testemunhos-container');
     
@@ -100,16 +104,46 @@ window.addEventListener('DOMContentLoaded', carregarDepoimentos);
       }
   
       // Enviar email com EmailJS
-      emailjs.send("service_xxxx", "template_xxxx", {
-          nome: nome,
-          email: email,
-          telefone: telefone,
-          mensagem: mensagem
-      })
-      .then(() => {
-          alert('Mensagem enviada com sucesso!');
-      }, (error) => {
-          alert('Erro ao enviar a mensagem:', error);
-      });
-  });
-  
+// Inicializando EmailJS com o seu ID de usuário
+(function() {
+    emailjs.init("ukYuc3_OPdZLXRz2h");  // Substitua "SEU_USER_ID" pelo seu ID de usuário do EmailJS
+})();
+
+// Função para validar formulário de contato e enviar e-mail
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();  // Impede o envio padrão do formulário
+
+    // Obtenção dos valores do formulário
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
+    const telefone = document.getElementById('telefone').value;
+    const mensagem = document.getElementById('mensagem').value;
+
+    // Verificação de campos obrigatórios
+    if (!nome || !email || !telefone || !mensagem) {
+        alert('Por favor, preencha todos os campos.');
+        return;
+    }
+
+    // Parâmetros a serem enviados para o EmailJS
+    const templateParams = {
+        nome: nome,
+        email: email,
+        telefone: telefone,
+        mensagem: mensagem
+    };
+
+    // Enviar o e-mail usando EmailJS
+    emailjs.send("service_6l40dh8", "template_2lkft8l", templateParams)
+    .then(function(response) {
+        alert('Mensagem enviada com sucesso!');
+        // Limpa o formulário após o envio
+        document.getElementById('contact-form').reset();
+    }, function(error) {
+        console.log('Erro ao enviar a mensagem:', error);
+        alert('Erro ao enviar a mensagem. Tente novamente mais tarde.');
+    });
+    });
+});
+
+

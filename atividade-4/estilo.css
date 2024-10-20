@@ -1,9 +1,44 @@
 /* Estilos básicos */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family:monospace;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+/* Estilização para tablets */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Estilização para smartphones */
+@media (max-width: 480px) {
+    .container {
+        padding: 5px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        font-size: 14px;
+    }
+
+    .swiper-container {
+        width: 100%;
+    }
 }
 
 /* Header */
@@ -91,6 +126,26 @@ padding-bottom: 33vh;
 /* Testemunhos */
 #testemunhos {
     padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.testemunho-card {
+    width: 300px;
+    margin: 20px;
+    padding: 15px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.testemunho-card[data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+}
+
+.testemunho-card[data-aos].aos-animate {
+    opacity: 1;
 }
 
 .testemunhos-container {
@@ -183,4 +238,22 @@ footer {
     font-size: 0.9em;
     font-style: italic;
     color: #555;
+}
+
+
+/* Estilização básica do botão */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Efeito de hover */
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Aumenta o tamanho ao passar o mouse */
+    transition: all 0.3s ease;
 }
